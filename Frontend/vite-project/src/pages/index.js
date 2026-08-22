@@ -1,0 +1,9 @@
+export { default as Home } from "./Home";
+export { default as TripDetails } from "./TripDetails";
+export { default as CreateTrip } from "./CreateTrip";
+export { default as EditTrip } from "./EditTrip";
+export { default as MyTrips } from "./MyTrips";
+export { default as Profile } from "./Profile";
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
+export { default as ExploreTrips } from "./ExploreTrips";
