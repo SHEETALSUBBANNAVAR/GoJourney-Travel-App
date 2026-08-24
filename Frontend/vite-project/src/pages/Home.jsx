@@ -20,7 +20,6 @@ const Home = () => {
         console.log("Backend response:", res.data);
 
         setTrips(res.data.trips);
-        console.log(res.data.trips);
         setIsRateLimited(false);
       } catch (error) {
         console.log("Error fetching trips:", error);
@@ -47,7 +46,6 @@ const Home = () => {
       ) : (
         <main className="mx-auto max-w-7xl px-4 py-10">
 
-          
           <div className="mb-8">
             <p className="text-sm font-medium text-blue-600">
               GoJourney

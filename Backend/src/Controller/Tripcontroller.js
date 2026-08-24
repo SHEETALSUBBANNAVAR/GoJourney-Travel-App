@@ -27,6 +27,32 @@ export const getAllCity = async (req, res) => {
         });
     }
 };
+export const getCityById = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const trip = await Note.findById(id);
+
+    if (!trip) {
+      return res.status(404).json({
+        success: false,
+        message: "Trip not found",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      trip,
+    });
+  } catch (error) {
+    console.error("Error fetching trip:", error);
+
+    res.status(500).json({
+      success: false,
+      message: "Server error",
+    });
+  }
+};
 
 
 // CREATE a new trip
